@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Rivera | AI, Data Science & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Alex Rivera - AI & Machine Learning Engineer, Data Scientist, and Full-Stack Web Developer. Explore interactive AI demos, data visualizations, and modern web applications.">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Neural Background Canvas -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" id="brand-logo">
+        <span class="logo-bracket">&lt;</span><span class="logo-text">AR</span><span class="logo-bracket">/&gt;</span>
+        <span class="logo-badge">AI &bull; Data &bull; Web</span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#interactive-lab" class="nav-link lab-link"><i class="fa-solid fa-flask"></i> AI Lab</a>
+        <a href="#experience" class="nav-link">Journey</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-outline-glow btn-sm">Let's Talk</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-pill animate-fade-in">
+            <span class="status-dot"></span> Available for AI & Full-Stack Opportunities
+          </div>
+          <h1 class="hero-title">
+            Engineering the Future of <br>
+            <span class="gradient-text type-target" id="typing-role">Artificial Intelligence</span><br>
+            & High-Impact Web Apps.
+          </h1>
+          <p class="hero-subtitle">
+            Bridging the gap between cutting-edge Deep Learning, predictive Data Science analytics, and high-performance, responsive full-stack applications.
+          </p>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-val" data-target="99.4">0</span><span class="metric-unit">%</span>
+              <span class="metric-label">Model Accuracy Avg</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val" data-target="25">0</span><span class="metric-unit">+</span>
+              <span class="metric-label">AI & Web Projects</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val" data-target="4">0</span><span class="metric-unit">+</span>
+              <span class="metric-label">Years Experience</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary" id="btn-explore-projects">
+              <span>View Projects</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#interactive-lab" class="btn btn-glass" id="btn-interactive-lab">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Try Live AI Demo
+            </a>
+          </div>
+
+          <div class="social-pills">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+            <a href="mailto:alex.rivera.ai@example.com" class="social-icon" title="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="terminal-card glass-panel glow-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">neural_engine.py &bull; active</div>
+              <div class="terminal-badge">Python 3.11</div>
+            </div>
+            <div class="terminal-body" id="terminal-code">
+              <div class="code-line"><span class="c-keyword">import</span> <span class="c-lib">torch</span>, <span class="c-lib">transformers</span>, <span class="c-lib">pandas</span> <span class="c-keyword">as</span> <span class="c-lib">pd</span></div>
+              <div class="code-line"><span class="c-keyword">from</span> <span class="c-lib">fastapi</span> <span class="c-keyword">import</span> FastAPI, WebSocket</div>
+              <div class="code-line">&nbsp;</div>
+              <div class="code-line"><span class="c-comment"># Initializing multi-modal cognitive system</span></div>
+              <div class="code-line"><span class="c-var">model</span> = DeepPipeline.from_pretrained(<span class="c-str">"transformer-v4"</span>)</div>
+              <div class="code-line"><span class="c-var">accuracy</span> = model.evaluate(test_stream)</div>
+              <div class="code-line"><span class="c-print">print</span>(<span class="c-str">f"Inference latency: 12ms | Loss: 0.021"</span>)</div>
+              <div class="code-line terminal-output"><i class="fa-solid fa-circle-check text-success"></i> &gt; Model compiled & serving on WebSocket 0.0.0.0:8000</div>
+              <div class="code-line terminal-output"><i class="fa-solid fa-chart-line text-info"></i> &gt; Real-time dataset throughput: 1.2M rows/sec</div>
+              <div class="code-cursor-line"><span class="c-prompt">&gt;&gt;&gt;</span> <span class="cursor-typing" id="cursor-typing">ready for production deployment</span><span class="blink-cursor">_</span></div>
+            </div>
+            <div class="terminal-footer">
+              <span class="stat-badge"><i class="fa-solid fa-microchip"></i> CUDA Accelerated</span>
+              <span class="stat-badge"><i class="fa-solid fa-bolt"></i> 99.8% Uptime</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-badge"><i class="fa-solid fa-user-astronaut"></i> Background</div>
+        <h2 class="section-title">The Intersection of <span class="gradient-text">Data & Code</span></h2>
+        <p class="section-subtitle">A multidisciplinary mindset building data-backed intelligence and user-delighting interfaces.</p>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel">
+            <div class="card-icon gradient-bg-1"><i class="fa-solid fa-brain"></i></div>
+            <h3>Artificial Intelligence</h3>
+            <p>Specialized in LLM fine-tuning, RAG pipelines, computer vision, and deep learning architectures with PyTorch and Hugging Face.</p>
+            <ul class="about-list">
+              <li><i class="fa-solid fa-check"></i> Transformer & Attention Models</li>
+              <li><i class="fa-solid fa-check"></i> LangChain & Vector Embeddings</li>
+              <li><i class="fa-solid fa-check"></i> Autonomous Agents & Prompt Tuning</li>
+            </ul>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="card-icon gradient-bg-2"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>Data Science & ML</h3>
+            <p>Extracting high-value actionable insights with statistical modeling, predictive algorithms, dynamic dashboards, and automated pipelines.</p>
+            <ul class="about-list">
+              <li><i class="fa-solid fa-check"></i> Time-Series & Clustering Analysis</li>
+              <li><i class="fa-solid fa-check"></i> Scikit-Learn, Pandas, NumPy</li>
+              <li><i class="fa-solid fa-check"></i> Interactive Plotly & D3 Visualizations</li>
+            </ul>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="card-icon gradient-bg-3"><i class="fa-solid fa-code"></i></div>
+            <h3>Full-Stack Web Dev</h3>
+            <p>Crafting robust, responsive, accessible web applications and microservices that turn complex ML models into sleek user products.</p>
+            <ul class="about-list">
+              <li><i class="fa-solid fa-check"></i> Modern JavaScript (ES6+), React/Next</li>
+              <li><i class="fa-solid fa-check"></i> FastAPI, Node.js, Express Backends</li>
+              <li><i class="fa-solid fa-check"></i> Modern UI/UX, Glassmorphism, CSS Grid</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section with Interactive Filter -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-badge"><i class="fa-solid fa-layer-group"></i> Expertise</div>
+        <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+        <p class="section-subtitle">Categorized breakdown of languages, frameworks, AI toolkits, and infrastructure.</p>
+
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="ai">AI & Deep Learning</button>
+          <button class="filter-btn" data-filter="ds">Data Science</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="tools">DevOps & Cloud</button>
+        </div>
+
+        <div class="skills-grid" id="skills-container">
+          <!-- AI Skills -->
+          <div class="skill-item glass-panel" data-category="ai">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-brands fa-python text-warning"></i> PyTorch / TensorFlow</span>
+              <span class="skill-level">94%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 94%;"></div></div>
+            <span class="skill-tag">Neural Nets, CNN, RNN</span>
+          </div>
+
+          <div class="skill-item glass-panel" data-category="ai">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-solid fa-robot text-primary"></i> Hugging Face & LLMs</span>
+              <span class="skill-level">92%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 92%;"></div></div>
+            <span class="skill-tag">Transformers, LoRA, RAG</span>
+          </div>
+
+          <div class="skill-item glass-panel" data-category="ai">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-solid fa-eye text-info"></i> OpenCV & Vision</span>
+              <span class="skill-level">88%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 88%;"></div></div>
+            <span class="skill-tag">Segmentation, Object Detection</span>
+          </div>
+
+          <!-- Data Science Skills -->
+          <div class="skill-item glass-panel" data-category="ds">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-solid fa-chart-simple text-danger"></i> Pandas & NumPy</span>
+              <span class="skill-level">96%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 96%;"></div></div>
+            <span class="skill-tag">Data Wrangling & ETL</span>
+          </div>
+
+          <div class="skill-item glass-panel" data-category="ds">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-solid fa-database text-success"></i> SQL & Vector DBs</span>
+              <span class="skill-level">90%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+            <span class="skill-tag">PostgreSQL, ChromaDB, Pinecone</span>
+          </div>
+
+          <div class="skill-item glass-panel" data-category="ds">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-solid fa-chart-line text-warning"></i> Plotly, Seaborn & D3</span>
+              <span class="skill-level">89%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 89%;"></div></div>
+            <span class="skill-tag">Interactive Analytics</span>
+          </div>
+
+          <!-- Web Dev Skills -->
+          <div class="skill-item glass-panel" data-category="web">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-brands fa-js text-warning"></i> JavaScript (ES6+) / TS</span>
+              <span class="skill-level">95%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+            <span class="skill-tag">Async JS, WebSockets, DOM</span>
+          </div>
+
+          <div class="skill-item glass-panel" data-category="web">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-brands fa-html5 text-danger"></i> Modern HTML5 & CSS3</span>
+              <span class="skill-level">98%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 98%;"></div></div>
+            <span class="skill-tag">Flexbox, Grid, Canvas, Animations</span>
+          </div>
+
+          <div class="skill-item glass-panel" data-category="web">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-brands fa-react text-info"></i> React & Next.js</span>
+              <span class="skill-level">90%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+            <span class="skill-tag">Hooks, SSR, State Management</span>
+          </div>
+
+          <div class="skill-item glass-panel" data-category="web">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-solid fa-server text-success"></i> FastAPI & Node.js</span>
+              <span class="skill-level">93%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 93%;"></div></div>
+            <span class="skill-tag">REST APIs, Async Endpoints</span>
+          </div>
+
+          <!-- DevOps & Cloud -->
+          <div class="skill-item glass-panel" data-category="tools">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-brands fa-docker text-primary"></i> Docker & Containers</span>
+              <span class="skill-level">87%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 87%;"></div></div>
+            <span class="skill-tag">Microservices, Containerization</span>
+          </div>
+
+          <div class="skill-item glass-panel" data-category="tools">
+            <div class="skill-head">
+              <span class="skill-name"><i class="fa-brands fa-aws text-warning"></i> AWS & Cloud GPUs</span>
+              <span class="skill-level">85%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+            <span class="skill-tag">EC2, S3, SageMaker, Lambda</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive AI & Data Lab (Live interactive mini-apps) -->
+    <section class="section lab-section" id="interactive-lab">
+      <div class="container">
+        <div class="section-badge"><i class="fa-solid fa-flask-vial"></i> Live Experiment</div>
+        <h2 class="section-title">Interactive <span class="gradient-text">AI & Data Lab</span></h2>
+        <p class="section-subtitle">Interact with real in-browser algorithms running on client-side JS.</p>
+
+        <div class="lab-wrapper glass-panel">
+          <div class="lab-tabs">
+            <button class="lab-tab-btn active" data-tab="sentiment"><i class="fa-solid fa-comments"></i> NLP Sentiment Analyzer</button>
+            <button class="lab-tab-btn" data-tab="regression"><i class="fa-solid fa-chart-scatter"></i> Live Linear Regression</button>
+            <button class="lab-tab-btn" data-tab="cluster"><i class="fa-solid fa-network-wired"></i> Neural Node Simulator</button>
+          </div>
+
+          <div class="lab-tab-contents">
+            <!-- Tab 1: Sentiment Analysis -->
+            <div class="lab-content active" id="tab-sentiment">
+              <div class="lab-desc">
+                <h4>Browser NLP Sentiment Analysis Engine</h4>
+                <p>Type or pick any sentence to calculate valence, subjectivity tokens, and emotional polarity scores in real time.</p>
+              </div>
+              <div class="sentiment-input-group">
+                <textarea id="sentiment-text" rows="3" placeholder="Type customer feedback, tweet, or prompt here... e.g., 'The AI model delivers breathtaking speed, brilliant accuracy, and flawless UX!'"></textarea>
+                <div class="quick-prompts">
+                  <span>Quick prompts:</span>
+                  <button class="prompt-pill" data-text="The revolutionary neural model delivered outstanding accuracy and extraordinary efficiency!">Positive Sample</button>
+                  <button class="prompt-pill" data-text="Server latency spikes resulted in frustrating failures and unreliable data pipeline crashes.">Negative Sample</button>
+                  <button class="prompt-pill" data-text="The system operates at 60 frames per second using standard HTTP protocols and caching.">Neutral Sample</button>
+                </div>
+              </div>
+              <div class="sentiment-results">
+                <div class="result-meter">
+                  <div class="meter-label">
+                    <span>Polarity Score</span>
+                    <strong id="sentiment-score">+0.85</strong>
+                  </div>
+                  <div class="meter-bar-bg">
+                    <div class="meter-indicator" id="sentiment-indicator" style="left: 85%;"></div>
+                  </div>
+                  <div class="meter-scale">
+                    <span>-1.0 (Negative)</span>
+                    <span>0.0 (Neutral)</span>
+                    <span>+1.0 (Positive)</span>
+                  </div>
+                </div>
+                <div class="result-badge-container">
+                  <span class="badge-status positive" id="sentiment-verdict"><i class="fa-solid fa-circle-check"></i> Strongly Positive</span>
+                  <span class="badge-tokens" id="sentiment-tokens">Key Words: revolutionary, outstanding, extraordinary</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Linear Regression Canvas -->
+            <div class="lab-content" id="tab-regression">
+              <div class="lab-desc">
+                <h4>Interactive Ordinary Least Squares (OLS) Regression</h4>
+                <p>Click on the plot canvas to add custom data coordinates. Watch the line of best fit $y = mx + b$, gradient descent loss, and $R^2$ dynamically update!</p>
+              </div>
+              <div class="regression-controls">
+                <button class="btn btn-sm btn-outline-glow" id="btn-clear-plot"><i class="fa-solid fa-trash"></i> Reset Data</button>
+                <button class="btn btn-sm btn-glass" id="btn-sample-data"><i class="fa-solid fa-dice"></i> Generate Sample Cluster</button>
+                <div class="regression-stats">
+                  <span>Slope (m): <b id="reg-slope">0.00</b></span>
+                  <span>Intercept (b): <b id="reg-intercept">0.00</b></span>
+                  <span>R² Score: <b id="reg-r2" class="text-success">0.00</b></span>
+                </div>
+              </div>
+              <div class="canvas-container">
+                <canvas id="regression-canvas" width="700" height="320"></canvas>
+              </div>
+            </div>
+
+            <!-- Tab 3: Neural Node Simulator -->
+            <div class="lab-content" id="tab-cluster">
+              <div class="lab-desc">
+                <h4>Multi-Layer Perceptron (MLP) Forward Pass Visualizer</h4>
+                <p>Adjust the activation bias and input weights to inspect activation values through simulated ReLU and Sigmoid layers.</p>
+              </div>
+              <div class="nn-simulator">
+                <div class="nn-sliders">
+                  <div class="slider-row">
+                    <label>Input Node X1: <span id="val-x1">0.8</span></label>
+                    <input type="range" id="input-x1" min="-1" max="1" step="0.1" value="0.8">
+                  </div>
+                  <div class="slider-row">
+                    <label>Input Node X2: <span id="val-x2">-0.4</span></label>
+                    <input type="range" id="input-x2" min="-1" max="1" step="0.1" value="-0.4">
+                  </div>
+                  <div class="slider-row">
+                    <label>Synapse Weight W1: <span id="val-w1">1.5</span></label>
+                    <input type="range" id="input-w1" min="-3" max="3" step="0.1" value="1.5">
+                  </div>
+                  <div class="slider-row">
+                    <label>Layer Bias (b): <span id="val-bias">0.2</span></label>
+                    <input type="range" id="input-bias" min="-2" max="2" step="0.1" value="0.2">
+                  </div>
+                </div>
+                <div class="nn-display glass-panel">
+                  <div class="nn-layer">
+                    <span class="layer-title">Input</span>
+                    <div class="nn-node active" id="node-x1">X1: 0.8</div>
+                    <div class="nn-node active" id="node-x2">X2: -0.4</div>
+                  </div>
+                  <div class="nn-connections">
+                    <i class="fa-solid fa-arrow-right-long synapse-icon"></i>
+                  </div>
+                  <div class="nn-layer">
+                    <span class="layer-title">Hidden (ReLU)</span>
+                    <div class="nn-node highlight" id="node-hidden">z: 0.80</div>
+                  </div>
+                  <div class="nn-connections">
+                    <i class="fa-solid fa-arrow-right-long synapse-icon"></i>
+                  </div>
+                  <div class="nn-layer">
+                    <span class="layer-title">Output ($\sigma$)</span>
+                    <div class="nn-node glow" id="node-output">0.69</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section with Multi-discipline Filter -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-badge"><i class="fa-solid fa-rocket"></i> Portfolio</div>
+        <h2 class="section-title">Featured <span class="gradient-text">Creations</span></h2>
+        <p class="section-subtitle">Real-world AI architectures, statistical analytics dashboards, and responsive web platforms.</p>
+
+        <div class="project-filters">
+          <button class="proj-filter active" data-tag="all">All Projects</button>
+          <button class="proj-filter" data-tag="ai">Artificial Intelligence</button>
+          <button class="proj-filter" data-tag="datasci">Data Science</button>
+          <button class="proj-filter" data-tag="web">Web Apps</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1: AI / LLM Agent -->
+          <div class="project-card glass-panel glow-hover" data-tags="ai web">
+            <div class="project-banner gradient-banner-1">
+              <div class="project-tags">
+                <span class="tag-pill">AI &amp; LLMs</span>
+                <span class="tag-pill">FastAPI</span>
+              </div>
+              <div class="banner-icon"><i class="fa-solid fa-brain"></i></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">OmniRAG: Multi-Modal Knowledge Engine</h3>
+              <p class="project-desc">
+                Enterprise retrieval-augmented generation engine integrating vector semantic search over 500k+ enterprise documents, hybrid re-ranking, and low-latency streaming completions.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">LangChain</span>
+                <span class="tech-tag">Pinecone</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fa-brands fa-github"></i> Source Code</a>
+                <a href="#interactive-lab" class="link-btn primary-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Data Science / Predictive Analytics -->
+          <div class="project-card glass-panel glow-hover" data-tags="datasci web">
+            <div class="project-banner gradient-banner-2">
+              <div class="project-tags">
+                <span class="tag-pill">Data Science</span>
+                <span class="tag-pill">TimeSeries</span>
+              </div>
+              <div class="banner-icon"><i class="fa-solid fa-chart-line"></i></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AlphaForecast: Market Anomaly Detector</h3>
+              <p class="project-desc">
+                High-throughput time-series forecasting platform processing financial tick data. Implements LSTM neural networks and XGBoost ensemble for real-time volatility clustering.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Scikit-Learn</span>
+                <span class="tech-tag">Plotly</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">FastAPI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fa-brands fa-github"></i> Source Code</a>
+                <a href="#interactive-lab" class="link-btn primary-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Computer Vision & Web Application -->
+          <div class="project-card glass-panel glow-hover" data-tags="ai web">
+            <div class="project-banner gradient-banner-3">
+              <div class="project-tags">
+                <span class="tag-pill">Computer Vision</span>
+                <span class="tag-pill">WebGL</span>
+              </div>
+              <div class="banner-icon"><i class="fa-solid fa-eye"></i></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">VisionFlow: Real-Time Biometric Analysis</h3>
+              <p class="project-desc">
+                In-browser edge AI platform leveraging TensorFlow.js and WebAssembly to track 468 facial mesh landmarks, emotion valence, and pose estimation directly in the browser with 60 FPS.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">TensorFlow.js</span>
+                <span class="tech-tag">HTML5 Canvas</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Web Workers</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fa-brands fa-github"></i> Source Code</a>
+                <a href="#interactive-lab" class="link-btn primary-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Test Live</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Full-Stack Web + Data Dashboard -->
+          <div class="project-card glass-panel glow-hover" data-tags="datasci web">
+            <div class="project-banner gradient-banner-4">
+              <div class="project-tags">
+                <span class="tag-pill">Full-Stack</span>
+                <span class="tag-pill">Analytics</span>
+              </div>
+              <div class="banner-icon"><i class="fa-solid fa-cubes"></i></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">PulseOps: Cloud Infrastructure Telemetry</h3>
+              <p class="project-desc">
+                Full-stack analytics SaaS platform with interactive heatmaps, real-time alerting via WebSockets, and automated anomaly classification using Bayesian probability.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Tailwind / CSS</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fa-brands fa-github"></i> Source Code</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn primary-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Journey Timeline -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-badge"><i class="fa-solid fa-clock-rotate-left"></i> Career</div>
+        <h2 class="section-title">Professional <span class="gradient-text">Journey</span></h2>
+        <p class="section-subtitle">Blending AI research with production-grade engineering excellence.</p>
+
+        <div class="timeline">
+          <div class="timeline-item left">
+            <div class="timeline-dot"><i class="fa-solid fa-brain"></i></div>
+            <div class="timeline-card glass-panel">
+              <span class="timeline-date">2024 - Present</span>
+              <h3 class="timeline-role">Lead AI &amp; Full-Stack Engineer</h3>
+              <h4 class="timeline-company">CognitiveScale Systems &bull; San Francisco / Remote</h4>
+              <p>Architecting production RAG workflows and distributed inference endpoints. Deployed web-based analytics consoles serving over 150,000 active daily queries.</p>
+              <div class="timeline-tags">
+                <span>LLM Deployment</span><span>FastAPI</span><span>React</span><span>CUDA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-dot"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="timeline-card glass-panel">
+              <span class="timeline-date">2022 - 2024</span>
+              <h3 class="timeline-role">Senior Data Scientist &amp; Web Engineer</h3>
+              <h4 class="timeline-company">Synthetix Data Labs &bull; New York, NY</h4>
+              <p>Built end-to-end predictive machine learning pipelines and interactive analytics interfaces. Reduced model training cycle time by 42% through automated ETL pipelines.</p>
+              <div class="timeline-tags">
+                <span>Pandas</span><span>PyTorch</span><span>Data Pipelines</span><span>D3.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+            <div class="timeline-card glass-panel">
+              <span class="timeline-date">2020 - 2022</span>
+              <h3 class="timeline-role">Full-Stack Software Developer</h3>
+              <h4 class="timeline-company">Nexus Software Innovations</h4>
+              <p>Developed responsive web applications, client dashboards, and integrated REST/GraphQL APIs with database optimization and robust unit testing.</p>
+              <div class="timeline-tags">
+                <span>JavaScript</span><span>Python</span><span>PostgreSQL</span><span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-badge"><i class="fa-solid fa-paper-plane"></i> Get In Touch</div>
+        <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+        <p class="section-subtitle">Have an AI concept, data science problem, or web project in mind? Let's connect.</p>
+
+        <div class="contact-wrapper">
+          <div class="contact-info glass-panel">
+            <h3>Contact Information</h3>
+            <p>I am always excited to discuss generative AI, predictive machine learning, and scalable modern web architecture.</p>
+
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="info-label">Email</span>
+                  <a href="mailto:alex.rivera.ai@example.com" class="info-val">alex.rivera.ai@example.com</a>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <span class="info-label">Location</span>
+                  <span class="info-val">San Francisco, CA / Remote Worldwide</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <div>
+                  <span class="info-label">Availability</span>
+                  <span class="info-val text-success">Open for Full-time &amp; Advisory</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-box"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-box"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://kaggle.com" target="_blank" rel="noopener noreferrer" class="social-box"><i class="fa-brands fa-kaggle"></i></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-box"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-form-card glass-panel">
+            <form id="portfolio-contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name</label>
+                  <input type="text" id="contact-name" name="name" placeholder="Alan Turing" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Your Email</label>
+                  <input type="email" id="contact-email" name="email" placeholder="alan@example.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Project Domain</label>
+                <select id="contact-subject" name="subject">
+                  <option value="ai">Artificial Intelligence &amp; LLMs</option>
+                  <option value="datasci">Data Science &amp; Predictive Analytics</option>
+                  <option value="fullstack">Full-Stack Web Development</option>
+                  <option value="consulting">Technical Architecture / Advisory</option>
+                  <option value="other">Other Inquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Project Details</label>
+                <textarea id="contact-message" name="message" rows="4" placeholder="Tell me about your project scope, timeline, and goals..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="btn-submit-message">
+                <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <div id="form-feedback" class="form-feedback hidden"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-bracket">&lt;</span><span class="logo-text">AR</span><span class="logo-bracket">/&gt;</span>
+        </a>
+        <p>&copy; 2026 Alex Rivera. Built with clean HTML5, CSS3, &amp; Vanilla JavaScript.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
